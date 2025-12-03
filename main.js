@@ -1,213 +1,200 @@
-// ДАННЫЕ АЛЬБОМА: фото + тексты на двух языках
-const albumPhotos = [
+// ДАННЫЕ АЛЬБОМА: фото + тексты RU/SV
+const photos = [
     {
-        img: "img/photo1.jpg",
+        src: "img/photo1.jpg",
         ru: {
-            title: "Первое прикосновение",
-            caption: "Тот момент, когда кольца встретились, а мир вокруг исчез."
+            title: "Описание кадра",
+            desc: "Момент, когда вы встретились взглядами и весь зал исчез."
         },
         sv: {
-            title: "Den första beröringen",
-            caption: "Ögonblicket då ringarna möttes och världen runt omkring försvann."
+            title: "Beskrivning av bilden",
+            desc: "Ögonblicket när era blickar möttes och hela rummet försvann."
         }
     },
     {
-        img: "img/photo2.jpg",
+        src: "img/photo2.jpg",
         ru: {
-            title: "Собранные мечты",
-            caption: "Все дороги привели вас к этому дню, к этому лёгкому дыханию счастья."
+            title: "Описание кадра",
+            desc: "Тот самый шаг навстречу, когда сердце говорит «да» раньше слов."
         },
         sv: {
-            title: "Samlande drömmar",
-            caption: "Alla vägar ledde hit, till denna dag och den mjuka andetaget av lycka."
+            title: "Beskrivning av bilden",
+            desc: "Det där steget mot varandra där hjärtat sa ”ja” långt före orden."
         }
     },
     {
-        img: "img/photo3.jpg",
+        src: "img/photo3.jpg",
         ru: {
-            title: "Тёплые голоса",
-            caption: "Смех близких смешался с шёпотом обещаний навсегда."
+            title: "Описание кадра",
+            desc: "Тихая радость в глазах, будто весь мир сузился до двух людей."
         },
         sv: {
-            title: "Varma röster",
-            caption: "Nära och käras skratt blandades med viskade löften om för alltid."
+            title: "Beskrivning av bilden",
+            desc: "Den stilla glädjen i blicken, som om hela världen krympte till två personer."
         }
     },
     {
-        img: "img/photo4.jpg",
+        src: "img/photo4.jpg",
         ru: {
-            title: "Танец сердец",
-            caption: "Каждый шаг — как строка из вашей общей истории любви."
+            title: "Описание кадра",
+            desc: "Руки, которые обещают держаться друг за друга во всех сезонах жизни."
         },
         sv: {
-            title: "Hjärtans dans",
-            caption: "Varje steg blev en rad i er gemensamma kärlekshistoria."
+            title: "Beskrivning av bilden",
+            desc: "Händer som lovar att hålla i varandra genom alla livets årstider."
         }
     },
     {
-        img: "img/photo5.jpg",
+        src: "img/photo5.jpg",
         ru: {
-            title: "Объятие тишины",
-            caption: "В паузе между музыкой вы услышали, как спокойно бьются два сердца."
+            title: "Описание кадра",
+            desc: "Смех, который разлетается по залу и остаётся эхо в памяти."
         },
         sv: {
-            title: "Tystnadens omfamning",
-            caption: "I pausen mellan tonerna hörde ni hur två hjärtan slog lugnt tillsammans."
+            title: "Beskrivning av bilden",
+            desc: "Skratt som fyller rummet och blir ett eko i minnet."
         }
     },
     {
-        img: "img/photo6.jpg",
+        src: "img/photo6.jpg",
         ru: {
-            title: "Сила взгляда",
-            caption: "Одного взгляда было достаточно, чтобы почувствовать: дом — это вы вдвоём."
+            title: "Описание кадра",
+            desc: "Танец, где каждый шаг — признание в любви без единого слова."
         },
         sv: {
-            title: "Blickens kraft",
-            caption: "En enda blick räckte för att känna att hem är ni två tillsammans."
+            title: "Beskrivning av bilden",
+            desc: "Dansen där varje steg är en kärleksförklaring utan ett enda ord."
         }
     },
     {
-        img: "img/photo7.jpg",
+        src: "img/photo7.jpg",
         ru: {
-            title: "В кругу света",
-            caption: "Свечи, улыбки, тихое тепло — всё это бережно хранит ваш день."
+            title: "Описание кадра",
+            desc: "Объятие, в котором становится спокойно и ясно, что дом — это человек."
         },
         sv: {
-            title: "I ljusets cirkel",
-            caption: "Ljus, leenden och stilla värme bevarar varsamt denna dag."
+            title: "Beskrivning av bilden",
+            desc: "Omfamningen där allt blir stilla och klart: hem är en människa."
         }
     },
     {
-        img: "img/photo8.jpg",
+        src: "img/photo8.jpg",
         ru: {
-            title: "Шаг навстречу будущему",
-            caption: "Рука в руке, вы сделали первый шаг в свою новую семейную историю."
+            title: "Описание кадра",
+            desc: "Вечерний свет, в котором ваши силуэты уже пишут семейную историю."
         },
         sv: {
-            title: "Ett steg mot framtiden",
-            caption: "Hand i hand tog ni det första steget in i er nya familjehistoria."
+            title: "Beskrivning av bilden",
+            desc: "Kvällsljuset där era siluetter redan skriver familjehistoria."
         }
     },
     {
-        img: "img/photo9.jpg",
+        src: "img/photo9.jpg",
         ru: {
-            title: "Тихое послевкусие",
-            caption: "Праздник закончился, но внутри осталось мягкое сияние этого дня."
+            title: "Описание кадра",
+            desc: "Праздник подошёл к концу, но в сердце остался мягкий свет этого дня."
         },
         sv: {
-            title: "Det stilla efterglödet",
-            caption: "Festligheterna tog slut, men inom er stannade dagens mjuka sken kvar."
+            title: "Beskrivning av bilden",
+            desc: "Festligheterna tog slut, men i hjärtat stannade dagens mjuka sken kvar."
         }
     }
 ];
 
-// Общие тексты интерфейса
-const uiText = {
+// Тексты интерфейса для двух языков
+const uiTexts = {
     ru: {
-        albumTitle: "СВАДЕБНЫЙ ДИЖИТАЛ-АЛЬБОМ",
-        subtitle: "Нежные воспоминания в бело-розовых тонах.",
-        descriptionLabel: "Описание кадра",
-        pageWord: "Страница",
-        ofWord: "из"
+        mainTitle: "СВАДЕБНЫЙ ДИЖИТАЛ-АЛЬБОМ",
+        subTitleTop: "Нежные воспоминания в бело-розовых тонах / Mjuka minnen i vitt och rosa.",
+        pageLabel: (i, total) => `Страница ${i} из ${total}`
     },
     sv: {
-        albumTitle: "Bröllopsdigital-album",
-        subtitle: "Mjuka minnen i vitt och rosa.",
-        descriptionLabel: "Beskrivning av bilden",
-        pageWord: "Sida",
-        ofWord: "av"
+        mainTitle: "Bröllopsdigital-album",
+        subTitleTop: "Mjuka minnen i vitt och rosa / Nежные minnen i vitt och rosa.",
+        pageLabel: (i, total) => `Sida ${i} av ${total}`
     }
 };
 
 // ЭЛЕМЕНТЫ DOM
-const pageCard = document.getElementById("page-card");
-const photoImg = document.getElementById("photo-img");
-const descriptionLabel = document.getElementById("description-label");
-const photoCaption = document.getElementById("photo-caption");
-const pageCounter = document.getElementById("page-counter");
-const albumTitleEl = document.getElementById("album-title");
-const albumSubtitleEl = document.getElementById("album-subtitle");
-const albumLogo = document.getElementById("album-logo");
-
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
+const photoImg = document.getElementById("photoImg");
+const frameTitle = document.getElementById("frameTitle");
+const frameDescription = document.getElementById("frameDescription");
+const pageIndicator = document.getElementById("pageIndicator");
+const mainTitleEl = document.getElementById("mainTitle");
+const subTitleTopEl = document.getElementById("subTitleTop");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const albumPage = document.getElementById("albumPage");
+const logoFooter = document.getElementById("logoFooter");
 const langButtons = document.querySelectorAll(".lang-btn");
 
-// СОСТОЯНИЕ
+// Текущее состояние
 let currentIndex = 0;
 let currentLang = "ru";
 
-// ФУНКЦИЯ ОТРИСОВКИ СТРАНИЦЫ
-function renderPage() {
-    const item = albumPhotos[currentIndex];
-    const langData = item[currentLang];
-    const ui = uiText[currentLang];
+// Обновление страницы альбома
+function updateAlbumPage(animateDirection = null) {
+    const photo = photos[currentIndex];
 
-    // фото
-    photoImg.src = item.img;
+    // Картинка
+    photoImg.src = photo.src;
 
-    // текст
-    descriptionLabel.textContent = ui.descriptionLabel;
-    albumTitleEl.textContent = ui.albumTitle;
-    albumSubtitleEl.textContent = ui.subtitle;
-    photoCaption.textContent = langData.caption;
+    // Текст в зависимости от языка
+    const textBlock = photo[currentLang];
+    frameTitle.textContent = `${textBlock.title} / ${currentLang === "ru" ? "Beskrivning av bilden" : "Описание кадра"}`;
+    frameDescription.textContent = textBlock.desc;
 
-    const total = albumPhotos.length;
-    pageCounter.textContent = `${ui.pageWord} ${currentIndex + 1} ${ui.ofWord} ${total}`;
+    // Заголовки
+    const ui = uiTexts[currentLang];
+    mainTitleEl.textContent = ui.mainTitle;
+    subTitleTopEl.textContent = ui.subTitleTop;
+    pageIndicator.textContent = ui.pageLabel(currentIndex + 1, photos.length);
 
-    // логотип только на последней странице
-    if (currentIndex === total - 1) {
-        albumLogo.classList.remove("hidden");
-    } else {
-        albumLogo.classList.add("hidden");
-    }
-
-    // язык документа (для доступности)
-    document.documentElement.lang = currentLang === "ru" ? "ru" : "sv";
-
-    // кнопки вперёд/назад
+    // Кнопки в начало/конец
     prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex === total - 1;
+    nextBtn.disabled = currentIndex === photos.length - 1;
+
+    // Логотип только на последней странице
+    logoFooter.style.display = currentIndex === photos.length - 1 ? "block" : "none";
+
+    // Анимация перелистывания
+    if (animateDirection) {
+        albumPage.classList.remove("flip-right", "flip-left");
+        // триггер, чтобы перезапустить анимацию
+        void albumPage.offsetWidth;
+        albumPage.classList.add(animateDirection === "right" ? "flip-right" : "flip-left");
+    }
 }
 
-// АНИМАЦИЯ ПЕРЕЛИСТЫВАНИЯ
-function playFlipAnimation(direction) {
-    const className = direction === "next" ? "flip-next" : "flip-prev";
-    pageCard.classList.remove("flip-next", "flip-prev"); // сброс
-    // принудительная перерисовка
-    void pageCard.offsetWidth;
-    pageCard.classList.add(className);
-}
-
-// ОБРАБОТЧИКИ КНОПОК
-prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        playFlipAnimation("prev");
-        renderPage();
-    }
-});
-
-nextBtn.addEventListener("click", () => {
-    if (currentIndex < albumPhotos.length - 1) {
-        currentIndex++;
-        playFlipAnimation("next");
-        renderPage();
-    }
-});
-
-// ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА
-langButtons.forEach((btn) => {
+// Смена языка
+langButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-        const lang = btn.dataset.lang;
+        const lang = btn.getAttribute("data-lang");
         if (lang === currentLang) return;
 
         currentLang = lang;
 
-        langButtons.forEach((b) => b.classList.toggle("active", b === btn));
-        renderPage();
+        langButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        updateAlbumPage(); // без анимации, только текст
     });
 });
 
+// Навигация по страницам
+prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex -= 1;
+        updateAlbumPage("left");
+    }
+});
+
+nextBtn.addEventListener("click", () => {
+    if (currentIndex < photos.length - 1) {
+        currentIndex += 1;
+        updateAlbumPage("right");
+    }
+});
+
 // ПЕРВЫЙ РЕНДЕР
-renderPage();
+updateAlbumPage();

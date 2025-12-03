@@ -4,69 +4,68 @@
 <head>
     <meta charset="UTF-8" />
     <title>Свадебный дижитал-альбом</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Красивый шрифт -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
-    <script defer src="main.js"></script>
 </head>
 
 <body>
-    <div class="album-wrapper">
+    <!-- Полупрозрачный фон с фото1 и розовым -->
+    <div class="background-overlay"></div>
 
-        <!-- Шапка -->
-        <header class="album-header">
-            <div class="album-titles">
-                <h1 id="album-title">СВАДЕБНЫЙ ДИЖИТАЛ-АЛЬБОМ</h1>
-                <p id="album-subtitle">
-                    Нежные воспоминания в бело-розовых тонах.
-                </p>
-            </div>
+    <header class="page-header">
+        <div class="header-text">
+            <h1 id="mainTitle">СВАДЕБНЫЙ ДИЖИТАЛ-АЛЬБОМ</h1>
+            <p id="subTitleTop">
+                Нежные воспоминания в бело-розовых тонах / Mjuka minnen i vitt och rosa.
+            </p>
+        </div>
 
-            <div class="lang-switch">
-                <button class="lang-btn active" data-lang="ru">RU</button>
-                <button class="lang-btn" data-lang="sv">SV</button>
-            </div>
-        </header>
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="sv">SV</button>
+        </div>
+    </header>
 
-        <!-- Область страницы-листка -->
-        <main>
-            <div class="page-shell">
-                <div class="page-card" id="page-card">
-                    <!-- Внутренний фон с цветком и кольцами идёт через ::before в CSS -->
-
-                    <div class="photo-frame">
-                        <img id="photo-img" src="img/photo1.jpg" alt="Wedding photo">
+    <main class="album-wrapper">
+        <section class="album-book">
+            <div class="album-page" id="albumPage">
+                <div class="photo-frame">
+                    <div class="photo-inner">
+                        <img id="photoImg" src="img/photo1.jpg" alt="Wedding photo" />
                     </div>
+                </div>
 
-                    <div class="page-text">
-                        <h2 id="description-label">Описание кадра</h2>
-                        <p id="photo-caption">
-                            Тот момент, когда кольца встретились, а мир вокруг исчез.
-                        </p>
+                <div class="page-text">
+                    <h3 id="frameTitle">Описание кадра / Beskrivning av bilden</h3>
+                    <p id="frameDescription">
+                        Момент, когда вы встретились взглядами и весь зал исчез.
+                    </p>
 
-                        <p id="page-counter" class="page-counter">Страница 1 из 9</p>
-
-                        <!-- Логотип только на последней странице -->
-                        <div id="album-logo" class="album-logo hidden">
-                            <img src="img/logo-vs.png" alt="VS LiteCode Studio">
-                        </div>
+                    <div class="page-footer">
+                        <span id="pageIndicator">Страница 1 из 9</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Навигация страниц (эффект перелистывания будет в JS+CSS) -->
-            <nav class="page-nav">
-                <button id="prev-btn" class="nav-btn" type="button">←</button>
-                <button id="next-btn" class="nav-btn" type="button">→</button>
-            </nav>
-        </main>
-    </div>
+            <div class="album-controls">
+                <button id="prevBtn" class="nav-btn nav-btn-left">←</button>
+                <button id="nextBtn" class="nav-btn nav-btn-right">→</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Логотип только для последней страницы -->
+    <footer class="album-logo-footer" id="logoFooter">
+        <img src="img/logo-vs.png" alt="VS Logo" />
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
