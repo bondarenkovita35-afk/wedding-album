@@ -3,69 +3,57 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Свадебный дижитал-альбом</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Красивый шрифт -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Wedding Album</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- Полупрозрачный фон с фото1 и розовым -->
-    <div class="background-overlay"></div>
 
-    <header class="page-header">
-        <div class="header-text">
-            <h1 id="mainTitle">СВАДЕБНЫЙ ДИЖИТАЛ-АЛЬБОМ</h1>
-            <p id="subTitleTop">
-                Нежные воспоминания в бело-розовых тонах / Mjuka minnen i vitt och rosa.
-            </p>
-        </div>
+    <div class="background-layer"></div>
 
-        <div class="lang-switch">
-            <button class="lang-btn active" data-lang="ru">RU</button>
-            <button class="lang-btn" data-lang="sv">SV</button>
-        </div>
-    </header>
+    <div class="album-wrapper">
 
-    <main class="album-wrapper">
-        <section class="album-book">
-            <div class="album-page" id="albumPage">
+        <header class="top-panel">
+            <h1 data-i18n="title.main"></h1>
+            <p data-i18n="title.sub"></p>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="sv">SV</button>
+            </div>
+        </header>
+
+        <div class="page-area">
+
+            <div class="page">
+
+                <div class="gold-texture"></div>
+
                 <div class="photo-frame">
-                    <div class="photo-inner">
-                        <img id="photoImg" src="img/photo1.jpg" alt="Wedding photo" />
-                    </div>
+                    <img id="album-photo" src="img/photo1.jpg" alt="">
                 </div>
 
-                <div class="page-text">
-                    <h3 id="frameTitle">Описание кадра / Beskrivning av bilden</h3>
-                    <p id="frameDescription">
-                        Момент, когда вы встретились взглядами и весь зал исчез.
-                    </p>
+                <p class="caption" id="album-caption"></p>
 
-                    <div class="page-footer">
-                        <span id="pageIndicator">Страница 1 из 9</span>
-                    </div>
+                <div id="album-logo" class="logo-block">
+                    <img src="img/logo-vs.png" alt="">
                 </div>
+
             </div>
 
-            <div class="album-controls">
-                <button id="prevBtn" class="nav-btn nav-btn-left">←</button>
-                <button id="nextBtn" class="nav-btn nav-btn-right">→</button>
-            </div>
-        </section>
-    </main>
+        </div>
 
-    <!-- Логотип только для последней страницы -->
-    <footer class="album-logo-footer" id="logoFooter">
-        <img src="img/logo-vs.png" alt="VS Logo" />
-    </footer>
+        <div class="controls">
+            <button id="prev" class="nav-btn">‹</button>
+            <span id="counter">1 / 9</span>
+            <button id="next" class="nav-btn">›</button>
+        </div>
+
+    </div>
 
     <script src="main.js"></script>
+
 </body>
 
 </html>
