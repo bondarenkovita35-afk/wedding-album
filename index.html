@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Свадебный дижитал-альбом</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="album-wrapper">
+
+        <!-- Шапка -->
+        <header class="album-header">
+            <div class="album-titles">
+                <h1 id="album-title">СВАДЕБНЫЙ ДИЖИТАЛ-АЛЬБОМ</h1>
+                <p id="album-subtitle">
+                    Нежные воспоминания в бело-розовых тонах.
+                </p>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="sv">SV</button>
+            </div>
+        </header>
+
+        <!-- Область страницы-листка -->
+        <main>
+            <div class="page-shell">
+                <div class="page-card" id="page-card">
+                    <!-- Внутренний фон с цветком и кольцами идёт через ::before в CSS -->
+
+                    <div class="photo-frame">
+                        <img id="photo-img" src="img/photo1.jpg" alt="Wedding photo">
+                    </div>
+
+                    <div class="page-text">
+                        <h2 id="description-label">Описание кадра</h2>
+                        <p id="photo-caption">
+                            Тот момент, когда кольца встретились, а мир вокруг исчез.
+                        </p>
+
+                        <p id="page-counter" class="page-counter">Страница 1 из 9</p>
+
+                        <!-- Логотип только на последней странице -->
+                        <div id="album-logo" class="album-logo hidden">
+                            <img src="img/logo-vs.png" alt="VS LiteCode Studio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Навигация страниц (эффект перелистывания будет в JS+CSS) -->
+            <nav class="page-nav">
+                <button id="prev-btn" class="nav-btn" type="button">←</button>
+                <button id="next-btn" class="nav-btn" type="button">→</button>
+            </nav>
+        </main>
+    </div>
+</body>
+
+</html>
